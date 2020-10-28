@@ -1,0 +1,11 @@
+# GNUplot Fitting
+
+# Constantes
+pi=3.14159265359
+nl=3467.0
+mu=4*pi*0.0000001
+Cc=0.0382
+
+f(x) = mu*nl*(1/Cc)*x
+
+fit f(x) 'calibhall.dat' u 1:($2*0.001) via Cc

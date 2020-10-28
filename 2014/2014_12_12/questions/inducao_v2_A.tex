@@ -1,0 +1,85 @@
+\question
+\textbf{Trabalho Pr\'{a}tico 6 : Indu\c{c}\~{a}o Eletromagn\'{e}tica}
+
+Recorde o trabalho pr\'{a}tico sobre a Indu\c{c}\~{a}o eletromagn\'{e}tica.
+
+\begin{parts}
+\part[10]
+Na primeira parte deste trabalho montou o circuito da Fig.~\ref{fig:bobinas}, com o objetivo de estudar a Lei de Faraday e de Lenz.
+
+Descreva o que observou no movimento dos ponteiros do galvan\'{o}metro, quando ligou a fonte de tens\~{a}o e, \`{a} luz das leis de Faraday e de Lenz, indique o sentido da corrente induzida no circuito da bobina 2.
+
+\begin{figure}[h]
+\centering
+\begin{pspicture}[showgrid=false](9,5)
+\pnodes(1,1){A}(1,4){B}(4,4){C}(4,1){D}(5,1){E}(5,4){F}(8,4){G}(8,1){H}
+\vdc[labeloffset=1](A)(D){$15~\text{V}$}
+\resistor[dipolestyle=zigzag,labelangle=:U](A)(B){$5~\Omega$}
+\coil[dipolestyle=curved,
+      labelangle=:U,
+      intensitylabel=$I$,
+      labeloffset=-.5](C)(D){$1200~\text{esp.}$}
+\newSwitch[tensionlabel=Bobina 1,
+           tensioncolor=white,
+           tensionlabeloffset=0.7](B)(C){}
+
+\coil[dipolestyle=curved,
+      labelangle=:U,
+      labeloffset=-.5](E)(F){$3600~\text{esp.}$}
+\wire(G)(H)      
+\circledipole[tensionlabel=Bobina 2,
+           tensioncolor=white,
+           tensionlabeloffset=0.7,
+           labeloffset=0.0](F)(G){\Large\textbf{G}}
+\wire(E)(H)
+
+\end{pspicture}
+\caption{\label{fig:bobinas}}
+\end{figure}
+
+\part\label{part:m}
+Considere um circuito no qual est\~{a}o ligados em s\'{e}rie um gerador de sinal, uma resist\^{e}ncia de $R\pm\Delta R=100\pm5~\Omega$ e um solenoide (daqui em diante referido como \emph{prim\'{a}rio}) de raio $r\pm\Delta r=1.38\pm0.01~\text{cm}$ e $N/l\pm\Delta N/l=3000\pm15$ espiras por metro. Uma bobina (daqui em diante referida como \emph{secund\'{a}rio}) de $N_b\pm\Delta N_b=1200\pm6$ espiras envolve o \emph{prim\'{a}rio}. Aplica-se um sinal triangular ao circuito \emph{prim\'{a}rio} tendo-se observado nos terminais da resist\^{e}ncia o sinal do Canal A da Fig.~\ref{fig:osci} (\emph{tracejado}). O sinal induzido no \emph{secund\'{a}rio} \'{e} o que se observa no Canal B da mesma figura (\emph{cheio}).
+
+\begin{subparts}
+\subpart[30]
+Determine o coeficiente de indu\c{c}\~{a}o m\'{u}tua observado e compare-o com o esperado, sabendo que a for\c{c}a eletromotriz (f.e.m.) induzida no \emph{secund\'{a}rio} \'{e} dada pela Eq.~\ref{eq:fem}.
+
+\begin{equation}
+\label{eq:fem}
+\varepsilon=\pi\mu_0\frac{N}{l}r^2N_b\frac{\mathrm d i}{\mathrm d t}
+\end{equation}
+
+\begin{figure}[h]
+\begin{center}
+\newpsstyle{Dash}{linestyle=dashed,
+linecolor=black,linewidth=0.035,plotpoints=50}
+\psscalebox{1}{
+\Oscillo[Wave1=\TriangleA,
+         Wave2=\RectangleB,
+    amplitude1=4.00,
+    amplitude2=-0.3,
+       period1=1.2,
+       period2=1.2,
+        phase1=0.0,
+        phase2=0.0,        
+    sensivity1=1.0,
+    sensivity2=0.2,
+       timediv=0.15,
+       offset2=-0.9,        
+    plotstyle1=Dash,
+      AllColor=false]}
+\caption{\label{fig:osci}Visor do oscilosc\'{o}pio. O Canal A est\'{a} representado a tracejado enquanto o Canal B a cheio.}
+\end{center}
+\end{figure}
+
+\subpart[15]
+Justique convenientemente a forma do sinal induzido (Fig.~\ref{fig:osci}~-~\textit{cheio})
+
+\subpart[10]
+Explique como efetuou as liga\c{c}\~{o}es \`{a} terra dos canais do oscil\'{o}scopio e do gerador de sinais. Justifique convenientemente a resposta.
+
+\subpart[10]
+Se o sinal aplicado (Canal A) fosse quadrangular, o sinal induzido (Canal B) seria triangular?
+
+\end{subparts}
+\end{parts}

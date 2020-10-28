@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper,final,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pstricks,pst-circ,pst-osci,pst-magneticfield}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=2cm,twoside]{geometry}
+\author{Tiago Á. Oliveira}
+\title{Relatorio Individual}
+
+
+\pagestyle{headandfoot}
+
+\extraheadheight[1.5in]{-.25in}
+
+\firstpageheader{\textbf{Prova Extraordin\'{a}ria}}
+{\includegraphics[scale=1]{figs/logo_UA}
+\linebreak\linebreak
+\LARGE\textbf{Eletricidade \& Magnetismo}
+\normalsize\linebreak
+(2014-2015)
+\linebreak\linebreak
+\textbf{Relat\'{o}rio Individual de Laborat\'{o}rio}
+\linebreak
+17 de dezembro de 2014
+\linebreak}
+{\textbf{Vers\~{a}o \'{U}nica}}
+
+\runningheader{\oddeven{}{Eletricidade \& Magnetismo (2014-15)}}{}{\oddeven{Relat\'{o}rio Individual de Laborat\'{o}rio}{}}
+\headrule
+
+\footrule
+\footer{\oddeven{}{P\'{a}gina \thepage}}{\iflastpage{Fim!}}{\oddeven{P\'{a}gina \thepage}{}}
+
+% RESPOSTAS 
+\printanswers
+\renewcommand{\solutiontitle}{\noindent\textbf{Resposta:}}
+
+
+\begin{document}
+\begin{center}
+\makebox[\textwidth]{\textbf{Nome:}~\underline{\hspace{11cm}}~\textbf{N.\textsuperscript{o} Mecanogr\'{a}fico:}~\underline{\hspace{2.5cm}}}
+\end{center}
+
+\noindent\textbf{Recomenda\c{c}\~{o}es:}
+\begin{itemize}
+\item O relat\'{o}rio \'{e} realizado individualmente;
+
+\item Leia atentamente todo o enunciado da prova e se tiver d\'{u}vidas coloque-as ao docente;
+
+\item Tem a dura\c{c}\~{a}o exata de 2 horas, sem qualquer toler\^{a}ncia;
+
+\item O enunciado do relat\'{o}rio tem apenas uma vers\~{a}o. 
+
+\item \underline{Dever\~{a}o justificar todas as respostas};
+
+\item N\~{a}o ser\'{a} permitida a consulta dos guias, fichas ou dos registos efetuados durante as aulas;
+
+\item N\~{a}o haver\'{a} formul\'{a}rio para as leis fundamentais (Lei de Ohm, Kirschoff, Faraday, Lenz, etc.). Equa\c{c}\~{o}es de dedu\c{c}\~{a}o complexa/demorada, caso sejam necess\'{a}rias, estar\~{a}o presentes no enunciado;
+
+\item Podem usar m\' {a}quina de calcular com capacidades gr\'{a}ficas;
+
+\item O uso do computador/tablet est\'{a} restringido apenas para uso no tratamento de dados (Excel, MatLAB, etc.) n\~{a}o podendo ser usado para consulta de PDF's ou liga\c{c}\~{a}o \`{a} Internet;
+
+\item O telem\'{o}vel dever\'{a} estar desligado durante a prova.
+\end{itemize}
+
+\noindent\textbf{Cota\c{c}\~{o}es:}
+\begin{center}
+\hqword{\textit{Quest\~{a}o}}
+\hpword{\textit{Pontos}}
+\hsword{\textit{Obtidos}}
+\htword{\textbf{Total}}
+\gradetable[h][questions]
+\linebreak
+\end{center}
+
+\noindent\textbf{Constantes fundamentais:}
+\begin{center}
+\begin{tabular}{cc}
+$\varepsilon_0 = 8.85\times10^{-12}~\text{C}^2/\text{Nm}^2$ & $\mu_0 = 4\pi\times10^{-7}~\text{N}/\text{A}^2$ \\ 
+$e=1.60\times10^{-19}~\text{C}$ & $m_e=9.11\times10^{-31}~\text{kg}$ \\ 
+\end{tabular} 
+\end{center}
+
+
+\boxedpoints
+\pointsinmargin
+\newpage
+\begin{questions}
+% Versao Unica
+\input{./questions/eletrometro.tex}
+\input{./questions/curtalongaderiv.tex}
+\input{./questions/inducao_v2_B.tex}
+\newpage
+\input{./questions/helmholtz_v2.tex}
+
+\end{questions}
+\end{document}

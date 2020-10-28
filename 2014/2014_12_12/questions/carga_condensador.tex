@@ -1,0 +1,115 @@
+%
+%
+
+\question
+\textbf{Trabalho Pr\'{a}tico 4 : Circuito RC}
+
+Recorde o Trabalho Pr\'{a}tico 4, no qual estudou a resposta transit\'{o}ria do circuito RC.
+
+Neste trabalho procedeu ao carregamento de um condensador, com capacidade conhecida $C=10~000\pm 20\%~\mu\text{F}$, usando o circuito da Fig.~\ref{fig:cargcond} e registou na Tabela~\ref{tab:vcondensador} a d.d.p. nos terminais do condensador em fun\c{c}\~{a}o do tempo $v_C\left(t\right)$.
+
+\begin{figure}[h]
+\centering
+\begin{pspicture}[showgrid=false](11,5)
+\pnodes(1,1){A}(1,4){B}(3,4){C}(6,4){D}(6,1){E}(9,4){F}(9,1){G}
+\vdc[labeloffset=1.1](B)(A){$15~\text{V}$}
+\newSwitch[ison=true](B)(C){$S_1$}
+\newSwitch[ison=true](D)(F){$S_2$}
+\resistor[dipolestyle=zigzag](C)(D){$R_1=1k5$}
+\resistor[dipolestyle=zigzag,labeloffset=-1.3](D)(E){$R_2=1k$}
+\capacitor[dipolestyle=chemical,
+           labeloffset=-1,
+           tension,
+           tensionlabel=$v_C\left(t\right)$,
+           tensionlabeloffset=1.5](F)(G){$C$}
+\wire(A)(E)
+\wire(E)(G)
+\newground(E)
+\end{pspicture}
+\caption{\label{fig:cargcond}Circuito de carregamento do condensador.}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{\label{tab:vcondensador}Tens\~{a}o ($v_C$) nos terminais do condensador em fun\c{c}\~{a}o do instante de tempo ($t$).}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+$t\pm 1$ (s) & 0 & 6 & 12 & 18 & 24 & 30 \\ 
+\hline 
+$v_C\pm 0.01$ (V) & 0.02 & 3.80 & 5.18 & 5.70 & 5.88 & 5.96 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+\begin{parts}
+\part[25]
+Sabendo que a d.d.p. nos terminais do condensador cresce exponencialmente, segundo a Eq.~\ref{eq:vcarga}, linearize esta express\~{a}o e determine experimentalmente a constante de tempo de carga do condensador $\tau$ e respetivo erro associado $\Delta\tau$, usando as medidas experimentais diretas presentes na Tabela~\ref{tab:vcondensador}.
+
+Nota: N\~{a}o precisa de representar graficamente os pontos experimentais e a reta da lineariza\c{c}\~{a}o.
+
+
+\begin{equation}
+\label{eq:vcarga}
+v_C\left(t\right)=\varepsilon\left[1-e^{\left(-\frac{t}{\tau}\right)}\right]
+\end{equation}
+\begin{solution}
+\emph{Proposta de lineariza\c{c}\~{a}o da Eq.~\ref{eq:vcarga}:}
+\begin{equation*}
+v_C\left(t\right)=\varepsilon\left[1-e^{\left(-\frac{t}{\tau}\right)}\right]
+\Leftrightarrow
+\frac{v_C\left(t\right)}{\varepsilon}=\left[1-e^{\left(-\frac{t}{\tau}\right)}\right]
+\Leftrightarrow
+\frac{v_C\left(t\right)}{\varepsilon}-1=-e^{\left(-\frac{t}{\tau}\right)}
+\Leftrightarrow
+1-\frac{v_C\left(t\right)}{\varepsilon}=e^{\left(-\frac{t}{\tau}\right)}
+\Leftrightarrow
+\end{equation*}
+\begin{equation*}
+\ln{\left[1-\frac{v_C\left(t\right)}{\varepsilon}\right]}=-\frac{t}{\tau}
+\Leftrightarrow
+-t=\tau\ln{\left[1-\frac{v_C\left(t\right)}{\varepsilon}\right]}
+\end{equation*}
+\begin{equation*}
+y=-t~,~x=\ln{\left[1-\frac{v_C\left(t\right)}{\varepsilon}\right]}~,~m=\tau~,~b=0
+\end{equation*}
+
+Deve-se sempre confirmar que $\Delta y \gg |m \Delta x|$, mas por falta de outros conhecimentos, avan\c{c}a-se com a analise.
+
+\emph{M\'{e}todo dos M\'{i}nimos Desvios Quadrados (MMDQ):}
+\begin{equation*}
+m=\tau~,~b=0~,r^2=
+\end{equation*}
+\end{solution}
+
+\part[15]
+Explique qual o significado f\'{i}sico da constante de tempo de carregamento do condensador $\tau$. Pode recorrer a esbo\c{c}os gr\'{a}ficos, caso lhe seja conveniente.
+
+\begin{solution}
+\begin{center}
+\begin{pspicture}[showgrid=false](-1.5,-0.5)(9,3.5)
+\psset{xunit=0.3cm,yunit=0.3cm}
+\psplot[plotpoints=10,linecolor=blue]{0}{6}{10 x mul 6 div}
+\psline[linecolor=blue,linestyle=dashed,dash=3pt 2pt](6,10)(6,0)
+\psplot[linecolor=red,plotpoints=100]{0}{30}{10 1 Euler x 6 div neg exp sub mul}
+\psline{->}(0,0)(0,12)
+\psline{->}(0,0)(30,0)
+\psline[linestyle=dashed,dash=3pt 2pt](0,10)(30,10)
+\psline[linecolor=red,linestyle=dashed,dash=3pt 2pt](0,6.3)(6,6.3)
+\rput[tl](30,0){$t$}
+\rput[br](0,12){$v_C$}
+\rput[t](6,-0.5){$\tau$}
+\rput[r](-0.5,10){$\varepsilon$}
+\rput[r](-0.5,6.3){$\left[1-\frac{1}{e}\right]\varepsilon$}
+\rput[r](-0.5,4.6){$\sim 63\%~\varepsilon$}
+\end{pspicture}
+\end{center}
+Na hipotese de que o carregamento do condensador tenha um comportamento linear (curva a \textcolor{blue}{azul}), a contante de tempo $\tau$ ser\'{a} o tempo necess\'{a}rio a este ficar totalmente carregado. Contudo, como o condensador exibe um comportamento exponencial de carregamento (curva a \textcolor{red}{vermelho}), a contante de tempo $\tau$ corresponde ao tempo necess\'{a}rio ao condensador a adquirir $\left[1-\frac{1}{e}\right]$ (ou seja, $\sim 63\%$) da carga m\'{a}xima.
+\end{solution}
+
+\part[10]
+De que modo teria de alterar o circuito da Fig.~\ref{fig:cargcond} para aumentar o valor da constante de tempo de carregamento do condensador $\tau$?
+
+\begin{solution}
+Atendendo ao circuito da Fig.~\ref{eq:vcarga}, a constante de tempo de carregamento do condensador \'{e} dada por $\tau=(R_1||R_2)C$. Para aumentar esta grandeza, mantendo a capacidade do condensador, teria que se alterar as resist\^{e}ncias, no seu conjunto ou isoladamente, de modo que a associa\c{c}\~{a}o de resist\^{e}ncias $R_1||R_2$ aumentasse o seu valor.
+\end{solution}
+\end{parts}

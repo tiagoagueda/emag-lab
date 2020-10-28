@@ -1,0 +1,53 @@
+\question[25]
+
+\textbf{Circuitos de Corrente Cont\'{i}nua}
+
+Durante a realiza\c{c}\~{a}o do trabalho pr\'{a}tico 3 foram apresentadas duas configura\c{c}\~{o}es destintas de medi\c{c}\~{a}o de uma resit\^{e}ncia desconhecida $R_x$, a partir da medi\c{c}\~{a}o, atrav\'{e}s de um amper\'{i}metro, da corrente $I$ que a atravessa e da medi\c{c}\~{a}o da queda de tens\~{a}o nesta, atrav\'{e}s de um voltimetro, conforme ilustra a Fig.~\ref{fig:medicaorx}.
+
+\begin{figure}[h]
+\centering
+\begin{tabular}{cc}
+\begin{pspicture}[showgrid=false](5,4)
+\pnode(0,0.5){A}
+\pnode(0,2){B}
+\pnode(2.5,2){C}
+\pnode(5,2){D}
+\pnode(5,0.5){E}
+\pnode(0,3.5){F}
+\pnode(5,3.5){G}
+\vdc(A)(E){}
+\resistor[dipolestyle=zigzag](C)(B){$R_x$}
+\circledipole[labeloffset=0](C)(D){\Large\textbf{A}}
+\circledipole[labeloffset=0](F)(G){\Large\textbf{V}}
+\wire(A)(B)
+\wire(D)(E)
+\wire(B)(F)
+\wire(D)(G)
+\end{pspicture}&
+\begin{pspicture}[showgrid=false](5,4)
+\pnode(0,0.5){A}
+\pnode(0,2){B}
+\pnode(2.5,2){C}
+\pnode(5,2){D}
+\pnode(5,0.5){E}
+\pnode(0,3.5){F}
+\pnode(2.5,3.5){G}
+\vdc(A)(E){}
+\resistor[dipolestyle=zigzag](C)(B){$R_x$}
+\circledipole[labeloffset=0](C)(D){\Large\textbf{A}}
+\circledipole[labeloffset=0](F)(G){\Large\textbf{V}}
+\wire(A)(B)
+\wire(D)(E)
+\wire(B)(F)
+\wire(C)(G)
+\end{pspicture}\\
+a)~Longa deriva\c{c}\~{a}o & b)~Curta deriva\c{c}\~{a}o
+\end{tabular}
+\caption{\label{fig:medicaorx}Configura\c{c}\~{o}es possiveis na medi\c{c}\~{a}o de $R_x$.}
+\end{figure}
+
+Sabendo que $R_A$ e $R_V$ s\~{a}o as resist\^{e}ncias internas do amperimetro e volt\'{i}metro, respetivamente, se pretender-mos medir a resist\^{e}ncia $R_x$, sabendo \`{a} partida que $R_x \gg R_A$, qual das duas configura\c{c}\~{o}es anteriores deveremos usar? \underline{Justifique convenientemente a sua resposta}.
+
+\begin{solution}
+Treta2!
+\end{solution}

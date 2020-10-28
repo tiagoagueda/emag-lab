@@ -1,0 +1,34 @@
+\question[25]
+\textbf{Trabalho Pr\'{a}tico 3 : Circuitos de Corrente Cont\'{i}nua}
+
+Durante a realiza\c{c}\~{a}o do trabalho pr\'{a}tico 3 foram apresentadas duas configura\c{c}\~{o}es destintas de medi\c{c}\~{a}o de uma resit\^{e}ncia desconhecida $R_x$, a partir da medi\c{c}\~{a}o, atrav\'{e}s de um amper\'{i}metro, da corrente $I$ que a atravessa e da medi\c{c}\~{a}o da queda de tens\~{a}o nesta, atrav\'{e}s de um voltimetro, conforme ilustra a figura seguinte.
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}[showgrid=false](8,6)
+\pnodes(1,1){A}(1,3){B}(4,3){C}(7,3){D}(7,1){E}(1,5){F}(4,5){G}(7,5){H}
+\vdc[labeloffset=-1.0](A)(E){\textbf{(a)}}
+\resistor[dipolestyle=zigzag](C)(D){$R_x$}
+\circledipole[labeloffset=0](B)(C){\Large\textbf{A}}
+\circledipole[labeloffset=0](G)(H){\Large\textbf{V}}
+\wire[arrows=-*](G)(C)
+\wire(A)(B)
+\wire(D)(E)
+\wire(D)(H)
+\end{pspicture}
+\begin{pspicture}[showgrid=false](8,6)
+\pnodes(1,1){A}(1,3){B}(4,3){C}(7,3){D}(7,1){E}(1,5){F}(4,5){G}(7,5){H}
+\vdc[labeloffset=-1.0](A)(E){\textbf{(b)}}
+\resistor[dipolestyle=zigzag](C)(D){$R_x$}
+\circledipole[labeloffset=0](B)(C){\Large\textbf{A}}
+\circledipole[labeloffset=0](F)(H){\Large\textbf{V}}
+\wire(F)(B)
+\wire(A)(B)
+\wire(D)(E)
+\wire(D)(H)
+\end{pspicture}
+\end{center}
+\caption{\label{fig:curtalongaderiv}\textbf{(a)}~-~Curta deriva\c{c}\~{a}o;~\textbf{(b)}~-~Longa deriva\c{c}\~{a}o;.}
+\end{figure}
+
+Sabendo que $R_A$ e $R_V$ s\~{a}o as resist\^{e}ncias internas do amperimetro e volt\'{i}metro, respertivamente, se pretender-mos medir uma resist\^{e}ncia com $R_x \gg R_A$, qual das duas configura\c{c}\~{o}es anteriores deveremos escolher? \underline{Justifique convenientemente a sua resposta}.

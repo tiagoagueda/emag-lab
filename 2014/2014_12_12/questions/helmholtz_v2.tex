@@ -1,0 +1,61 @@
+\question
+\textbf{Trabalho Pr\'{a}tico 5 : Bobinas de Helmholtz}
+
+Recorde o trabalho pr\'{a}tico sobre o estudo do campo magn\'{e}tico produzido pelas Bobinas de Helmholtz.
+
+\begin{parts}
+\part[20]
+No decorrer deste trabalho usou as bobinas de Helmholtz em diferentes configura\c{c}\~{o}es: com corrente a fluir apenas numa bobina; com corrente a fluir no mesmo sentido nas duas bobinas; e com corrente a fluir nas duas bobinas em sentidos opostos. Na Fig.~\ref{fig:helmholtzfield} encontra-se as linhas de campo produzidas por uma dessas configura\c{c}\~{o}es. Indique a qual configura\c{c}\~{a}o corresponde as linhas de campo ilustradas, justificando convenientemente a sua escolha.
+
+\begin{figure}[ht]
+\centering
+\psset{unit=1,AntiHelmholtz,N=2,
+R=2,pointsB=1000,pointsS=1000,PasB=0.001,PasS=0.003,nS=10,
+nL=2,drawSelf=true,styleSpire=styleSpire,styleCourant=sensCourant}
+\newpsstyle{grille}{subgriddiv=0,gridcolor=blue!50,griddots=10}
+\newpsstyle{cadre}{linecolor=yellow!50}
+\newpsstyle{styleSpire}{linecap=1,linecolor=red,linewidth=4\pslinewidth}
+\newpsstyle{sensCourant}{linecolor=red,linewidth=1\pslinewidth}
+\begin{pspicture*}[showgrid](-4,-4)(4,4)
+\rput{90}{\psframe*[linecolor={[HTML]{996666}}](-7,6)(7,6)
+\psmagneticfield[linecolor=black]}
+\end{pspicture*}
+\caption{\label{fig:helmholtzfield}Linhas de campo magn\'{e}tico produzido pelas Bobinas de Helmholtz.}
+\end{figure}
+
+\part[20]
+A medi\c{c}\~{a}o do campo foi feita com recurso a uma sonda de efeito de Hall. Explique o que \'{e} o efeito de Hall num semicondutor cujos portadores de carga maiorit\'{a}rios s\~{a}o negativos. (Nota: Pode recorrer a esbo\c{c}o gr\'{a}fico para ilustrar a sua resposta.)
+
+\part[20]
+A calibra\c{c}\~{a}o da sonda foi feita recorrendo a um solenoide padr\~{a}o com $3467\pm60$ espiras por metro. As medidas obtidas est\~{a}o presentes na Tabela~\ref{tab:calibhall}.
+
+\begin{table}[h]
+\caption{\label{tab:calibhall}Tens\~{a}o ($V_H$) amplificada da sonda por efeito de Hall em fun\c{c}\~{a}o da corrente ($I_S$) que atravessa o solenoide padr\~{a}o.}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$I_S~\pm~0.01$ (A) & $V_H~\pm~0.1$ (mV) \\ \hline
+0.08 & 32.5 \\ 
+0.18 & 48.5 \\ 
+0.29 & 64.5 \\ 
+0.47 & 91.9 \\ 
+0.69 & 126.4 \\ 
+0.82 & 145.8 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Com base nestes valores, obtenha a constante de calibra\c{c}\~{a}o da sonda de efeito de Hall, bem como o respetivo erro. Nota: O campo magn\'{e}tico ao longo do eixo de um solenoide infinito \'{e} dado pela Eq.~\ref{eq:solenoide}.
+\begin{equation}
+\label{eq:solenoide}
+\left|\overrightarrow{B_S}\right|=\mu_0\frac{N}{l}I_S
+\end{equation}
+
+\part[15]
+Determine a corrente aplicada numa bobina se esta tiver $200~\text{espiras}$, sabendo que o campo magn\'{e}tico produzido por uma espira ao longo do seu eixo \'{e} dado pela Eq.~\ref{eq:coilfield} e que o valor m\'{a}ximo medido da tens\~{a}o de Hall \'{e} $V_{H,\text{max}}=38.8~\text{mV}$.
+
+\begin{equation}
+\label{eq:coilfield}
+B\left(x\right)=\frac{\mu_0}{2}\frac{IR^2}{\left(R^2+x^2\right)^{3/2}}
+\end{equation}
+\end{parts}

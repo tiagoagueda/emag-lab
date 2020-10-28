@@ -1,0 +1,101 @@
+\question
+\textbf{Trabalho Pr\'{a}tico 6 : Indu\c{c}\~{a}o Eletromagn\'{e}tica}
+
+Recorde o trabalho pr\'{a}tico sobre a Indu\c{c}\~{a}o eletromagn\'{e}tica.
+
+\begin{parts}
+\part[10]
+Na primeira parte deste trabalho montou o circuito da Fig.~\ref{fig:bobinas}, com o objetivo de estudar a Lei de Faraday e de Lenz, na qual se varia o fluxo magn\'{e}tico atrav\'{e}s de uma bobina quando esta est\'{a} em movimento relativo a uma outra, percorrida por uma corrente $I$.
+
+Descreva o que observou no movimento dos ponteiros do galvan\'{o}metro, quando afastou a bobina 2 e, \`{a} luz das leis de Faraday e de Lenz, indique o sentido da corrente induzida no circuito da bobina 2.
+
+\begin{figure}[h]
+\centering
+\begin{pspicture}[showgrid=false](9,5)
+\pnodes(1,1){A}(1,4){B}(4,4){C}(4,1){D}(5,1){E}(5,4){F}(8,4){G}(8,1){H}
+\vdc[labeloffset=1](A)(D){$15~\text{V}$}
+\resistor[dipolestyle=zigzag,labelangle=:U](A)(B){$5~\Omega$}
+\coil[dipolestyle=curved,
+      intensitylabel=$I$,
+      tensionlabel=Bobina 1,
+      tensioncolor=white,
+      tensionlabeloffset=0.7,
+      labeloffset=-.5](B)(C){$1200~\text{esp.}$}
+\wire(C)(D)
+
+\wire(E)(F)
+\coil[dipolestyle=curved,
+      tensionlabel=Bobina 2,
+      tensionlabeloffset=0.7,
+      labeloffset=-.5](F)(G){$3600~\text{esp.}$}
+\wire(G)(H)
+\circledipole[labeloffset=0](E)(H){\Large\textbf{G}}
+
+\end{pspicture}
+\caption{\label{fig:bobinas}}
+\end{figure}
+
+\begin{solution}
+
+\end{solution}
+
+\part\label{part:m}
+Considere um circuito no qual est\~{a}o ligados em s\'{e}rie um gerador de sinal, uma resist\^{e}ncia de $R=100~\Omega$ e um solenoide de raio $r=1.38~\text{cm}$ e $N/l=3000$ espiras por metro. Uma bobina de $N_b=1200$ espiras envolve o solenoide.
+\begin{subparts}
+\subpart[20]
+Sabendo que a for\c{c}a eletromotriz (f.e.m.) induzida na bobina dada pela Eq.~\ref{eq:fem}, determine o coeficiente de indu\c{c}\~{a}o m\'{u}tua esperado.
+
+\begin{equation}
+\label{eq:fem}
+\varepsilon=\pi\mu_0\frac{N}{l}r^2N_b\frac{\mathrm d i}{\mathrm d t}
+\end{equation}
+
+\begin{solution}
+Como $\varepsilon=M\frac{\mathrm d i}{\mathrm d t}$, facilmente se infere da Eq.~\ref{eq:fem} que o coeficiente de indu\c{c}\~{a}o m\'{u}tua esperado \'{e} dado por:
+\begin{equation*}
+M=\pi\mu_0\frac{N}{l}r^2N_b
+\end{equation*}
+\end{solution}
+\end{subparts}
+
+\part 
+Considere um circuito no qual est\~{a}o ligados em s\'{e}rie um gerador de sinal e uma bobina ($1200~\text{espiras}$, resist\^{e}ncia de $13~\Omega$ e coeficiente de auto-indut\^{a}ncia $L=54~\text{mH}$.)
+
+Aplicou-se um sinal sinusoidal \`{a} bobina, observando-o no Canal A do oscilosc\'{o}pio (Fig~\ref{fig:osci}. - \textit{tracejado}) tendo-se observado no Canal B dos oscilosc\'{o}pio (Fig~\ref{fig:osci}. - \textit{cheio}) o sinal induzido no solenoide.
+
+\begin{figure}[h]
+\begin{center}
+\newpsstyle{Dash}{linestyle=dashed,
+linecolor=black,linewidth=0.035,plotpoints=50}
+\psscalebox{1}{
+\Oscillo[Wave1=\SinusA,
+         Wave2=\SinusB,
+    amplitude1=15.5,
+    amplitude2=1.2,
+       period1=.44,
+       period2=.44,
+        phase1=0.0,
+        phase2=0.0,        
+    sensivity1=5.0,
+    sensivity2=1.0,
+       timediv=0.1,       
+    plotstyle1=Dash,
+      AllColor=false]}
+\caption{\label{fig:osci}Visor do oscilosc\'{o}pio. O Canal A est\'{a} representado a tracejado enquanto o Canal B a cheio.}
+\end{center}
+\end{figure}
+
+\begin{subparts}
+\subpart[25]
+Calcule o coeficiente de indu\c{c}\~{a}o m\'{u}tua do circuito e compare-o com o valor obtido em~(\ref{part:m}). 
+\begin{solution}
+
+\end{solution}
+
+\subpart[20]
+Se o sinal aplicado (Canal A) fosse quadrangular, o sinal induzido (Canal B) seria triangular? \underline{Justifique} a sua resposta.
+\begin{solution}
+N\~{a}o. Como j\'{a} se constatou em al\'{i}neas anteriores, a f.e.m. induzida $\varepsilon\propto\frac{\mathrm d i}{\mathrm d t}$ logo se o sinal aplicado \'{e} de forma quadrangular, a sua derivada \'{e} nula nos patamares extremos dos sinais, havendo apenas descuntinuidade na transi\c{c}\~{a}o da componente positiva para a negativa (e vice-versa) do sinal aplicado. Isso traduzirar-se ia num sinal induzido praticamente nulo, apresentando descontinuidades.
+\end{solution}
+\end{subparts}
+\end{parts}
